@@ -1,0 +1,195 @@
+body {
+    background: #1a1a1a; /* Fallback */
+    background: linear-gradient(135deg, #1a1a1a 0%, #121212 100%);
+    color: #e0e0e0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.control-grid {
+    display: grid;
+    grid-template-areas:
+        "frequency frequency"
+        "main-controls volume";
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.control-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.frequency-control {
+    grid-area: frequency;
+    width: 100%;
+}
+
+.main-controls { grid-area: main-controls; }
+.volume-control { grid-area: volume; }
+
+/* Frequency Slider */
+.frequency-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 80%;
+    max-width: 500px;
+    height: 15px;
+    background: #444;
+    border-radius: 10px;
+    outline: none;
+    margin: 1rem 0;
+}
+
+.frequency-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 36px;
+    height: 36px;
+    background: #00aaff;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 8px rgba(0, 170, 255, 0.7);
+    transition: transform 0.1s ease-out, background-color 0.15s ease-in-out;
+}
+
+.frequency-slider:active::-webkit-slider-thumb {
+    transform: scale(1.1);
+    background-color: #00caff;
+}
+
+.frequency-slider::-moz-range-thumb {
+    width: 36px;
+    height: 36px;
+    background: #00aaff;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 8px rgba(0, 170, 255, 0.7);
+    transition: transform 0.1s ease-out, background-color 0.15s ease-in-out;
+}
+
+.frequency-slider:active::-moz-range-thumb {
+    transform: scale(1.1);
+    background-color: #00caff;
+}
+
+.display {
+    background-color: #1a1a1a;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    font-family: 'Courier New', Courier, monospace;
+    min-width: 150px;
+    text-align: center;
+}
+
+/* Main Controls */
+#play-stop-btn {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    background-color: #00aaff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+#play-stop-btn:active {
+    transform: scale(0.98);
+}
+
+#play-stop-btn:hover {
+    background-color: #0088cc;
+}
+
+.waveform-selector {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.waveform {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: #333;
+    color: #e0e0e0;
+    border: 1px solid #555;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.waveform:active {
+    transform: scale(0.98);
+}
+
+.waveform:hover {
+    background-color: #444;
+}
+
+.waveform.active {
+    background-color: #00aaff;
+    color: white;
+    border-color: #00aaff;
+}
+
+/* Volume */
+.volume-control {
+    justify-content: center;
+}
+
+#volume-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 150px;
+    height: 8px;
+    background: #444;
+    border-radius: 5px;
+    outline: none;
+}
+
+#volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #00aaff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.15s ease-in-out, transform 0.15s ease-in-out;
+}
+
+#volume-slider:active::-webkit-slider-thumb {
+    background-color: #00caff;
+    transform: scale(1.1);
+}
+
+#volume-slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #00aaff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.15s ease-in-out, transform 0.15s ease-in-out;
+}
+
+#volume-slider:active::-moz-range-thumb {
+    background-color: #00caff;
+    transform: scale(1.1);
+}

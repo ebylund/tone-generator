@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tone Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tone Generator</h1>
+        <div class="controls">
+            <div class="control-grid">
+                <div class="control-group frequency-control">
+                    <input type="range" id="freq-slider" class="frequency-slider" min="0" max="1" step="0.001">
+                    <div id="freq-display" class="display">440 Hz</div>
+                </div>
+
+                <div class="control-group main-controls">
+                    <button id="play-stop-btn">Play</button>
+                    <div class="waveform-selector">
+                        <button class="waveform active" data-wave="sine">Sine</button>
+                        <button class="waveform" data-wave="square">Square</button>
+                        <button class="waveform" data-wave="sawtooth">Saw</button>
+                        <button class="waveform" data-wave="triangle">Tri</button>
+                    </div>
+                </div>
+
+                <div class="control-group volume-control">
+                    <label for="volume-slider">Volume</label>
+                    <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0.5">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
