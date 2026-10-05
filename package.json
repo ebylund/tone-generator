@@ -1,0 +1,11 @@
+{
+  "name": "tone-generator",
+  "version": "1.0.0",
+  "description": "A simple web-based tone generator.",
+  "main": "app.js",
+  "scripts": {
+    "start": "python3 -m http.server"
+  },
+  "author": "",
+  "license": "ISC"
+}
